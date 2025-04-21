@@ -20,6 +20,14 @@ const Index = () => {
     <div className="min-h-screen">
       <NavBar />
       <main>
+        {/* Logo da zapFlow centralizado */}
+        <div className="flex justify-center py-10 bg-black">
+          <img
+            src="/lovable-uploads/8e67d253-935d-4359-9c6d-41e8abf08136.png"
+            alt="Logo zapFlow"
+            className="max-w-xs sm:max-w-sm md:max-w-md"
+          />
+        </div>
         <Hero />
         <ServicesSection />
         <AboutSection />
@@ -34,3 +42,4 @@ const Index = () => {
 };
 
 export default Index;
+
