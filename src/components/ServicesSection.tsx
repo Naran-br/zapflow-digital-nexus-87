@@ -31,17 +31,17 @@ const services = [
     icon: <Lightbulb className="h-10 w-10 text-zapflow-600" />,
     title: "Consultoria Tecnológica",
     description:
-      "Orientamos sua empresa na escolha e implementação das melhores soluções tecnológicas para impulsionar seu crescimento.",
+      "Orientamos sua empresa na escolha e implementação das melhores soluções tecnologicas para impulsionar seu crescimento.",
   },
 ];
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="section bg-white">
+    <section id="services" className="section bg-[#303030]">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="mb-4 text-zapflow-950">Nossos Serviços</h2>
-          <p className="text-gray-600 text-lg">
+          <h2 className="mb-4 text-white">Nossos Serviços</h2>
+          <p className="text-gray-300 text-lg">
             Oferecemos soluções tecnológicas completas para transformar e 
             modernizar seu negócio, aumentando eficiência e resultados.
           </p>
@@ -71,3 +71,4 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
+
