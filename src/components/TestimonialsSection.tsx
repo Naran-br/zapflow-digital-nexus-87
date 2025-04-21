@@ -36,11 +36,11 @@ const partners = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="section bg-white">
+    <section id="testimonials" className="section bg-[#303030]">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="mb-4 text-zapflow-950">O Que Nossos Clientes Dizem</h2>
-          <p className="text-gray-600 text-lg">
+          <h2 className="mb-4 text-white">O Que Nossos Clientes Dizem</h2>
+          <p className="text-gray-300 text-lg">
             A satisfação de nossos clientes é nossa maior conquista. Conheça algumas
             histórias de sucesso e parcerias que construímos.
           </p>
@@ -50,7 +50,7 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 card-hover"
+              className="bg-[#222] p-8 rounded-lg shadow-sm border border-gray-700 card-hover"
             >
               <div className="flex mb-4">
                 {[...Array(testimonial.stars)].map((_, i) => (
@@ -61,28 +61,28 @@ const TestimonialsSection = () => {
                   />
                 ))}
               </div>
-              <p className="text-gray-700 mb-6 italic">"{testimonial.quote}"</p>
+              <p className="text-gray-100 mb-6 italic">"{testimonial.quote}"</p>
               <div>
-                <h4 className="font-semibold text-zapflow-800">
+                <h4 className="font-semibold text-zapflow-200">
                   {testimonial.name}
                 </h4>
-                <p className="text-gray-600 text-sm">{testimonial.company}</p>
+                <p className="text-gray-400 text-sm">{testimonial.company}</p>
               </div>
             </div>
           ))}
         </div>
 
         <div className="mt-16">
-          <h3 className="text-center text-2xl mb-10 text-zapflow-800">
+          <h3 className="text-center text-2xl mb-10 text-zapflow-200">
             Nossos Parceiros
           </h3>
           <div className="flex flex-wrap justify-center gap-8">
             {partners.map((partner, index) => (
               <div
                 key={index}
-                className="w-40 h-20 flex items-center justify-center rounded-md border border-gray-100 bg-white shadow-sm p-4"
+                className="w-40 h-20 flex items-center justify-center rounded-md border border-gray-700 bg-[#222] shadow-sm p-4"
               >
-                <div className="font-medium text-gray-700">{partner.name}</div>
+                <div className="font-medium text-gray-200">{partner.name}</div>
               </div>
             ))}
           </div>

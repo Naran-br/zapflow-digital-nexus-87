@@ -1,10 +1,9 @@
-
 import React from "react";
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="home" className="pt-28 pb-16 md:pt-40 md:pb-24 bg-gradient-to-br from-white to-blue-50">
+    <section id="home" className="pt-28 pb-16 md:pt-40 md:pb-24 bg-[#303030]">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 max-w-2xl animate-fade-in">
@@ -46,9 +45,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#303030] to-transparent"></div>
     </section>
   );
 };
-
 export default Hero;

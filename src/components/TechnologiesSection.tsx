@@ -61,11 +61,11 @@ const technologies = [
 
 const TechnologiesSection = () => {
   return (
-    <section id="technologies" className="section bg-white">
+    <section id="technologies" className="section bg-[#303030]">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="mb-4 text-zapflow-950">Tecnologias Utilizadas</h2>
-          <p className="text-gray-600 text-lg">
+          <h2 className="mb-4 text-white">Tecnologias Utilizadas</h2>
+          <p className="text-gray-300 text-lg">
             Trabalhamos com as mais avançadas tecnologias do mercado para garantir
             soluções eficientes, seguras e escaláveis para seu negócio.
           </p>
@@ -75,15 +75,15 @@ const TechnologiesSection = () => {
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden card-hover"
+              className="bg-[#222] rounded-lg shadow-sm border border-gray-700 overflow-hidden card-hover"
             >
               <div className="flex items-start p-6">
                 <div className={`${tech.bgColor} rounded-lg p-2 mr-4`}>
                   {tech.icon}
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-zapflow-800">{tech.name}</h3>
-                  <p className="text-gray-600">{tech.description}</p>
+                  <h3 className="text-lg font-semibold mb-2 text-zapflow-200">{tech.name}</h3>
+                  <p className="text-gray-300">{tech.description}</p>
                 </div>
               </div>
             </div>

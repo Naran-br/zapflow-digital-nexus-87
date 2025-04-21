@@ -43,11 +43,11 @@ const projects = [
 
 const PortfolioSection = () => {
   return (
-    <section id="portfolio" className="section bg-gray-50">
+    <section id="portfolio" className="section bg-[#303030]">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="mb-4 text-zapflow-950">Nosso Portfólio</h2>
-          <p className="text-gray-600 text-lg">
+          <h2 className="mb-4 text-white">Nosso Portfólio</h2>
+          <p className="text-gray-300 text-lg">
             Conheça alguns dos projetos que desenvolvemos e como ajudamos nossos
             clientes a alcançarem seus objetivos através da tecnologia.
           </p>
@@ -57,12 +57,12 @@ const PortfolioSection = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="rounded-lg overflow-hidden bg-white shadow-sm border border-gray-100 card-hover"
+              className="rounded-lg overflow-hidden bg-[#222] shadow-sm border border-gray-700 card-hover"
             >
               <div 
                 className={`h-48 ${project.image} flex items-center justify-center p-6`}
               >
-                <div className="font-bold text-xl text-center text-gray-800">
+                <div className="font-bold text-xl text-center text-gray-100">
                   {project.title.split(" ").slice(0, 2).join(" ")}
                 </div>
               </div>
@@ -70,13 +70,13 @@ const PortfolioSection = () => {
                 <div className="text-xs font-medium text-zapflow-600 mb-2">
                   {project.category}
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-zapflow-800">
+                <h3 className="text-lg font-semibold mb-2 text-zapflow-200">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <p className="text-gray-300 mb-4">{project.description}</p>
                 <a
                   href="#"
-                  className="inline-flex items-center text-zapflow-600 hover:text-zapflow-800 font-medium"
+                  className="inline-flex items-center text-zapflow-400 hover:text-zapflow-200 font-medium"
                 >
                   Ver Detalhes
                   <ExternalLink size={16} className="ml-1" />

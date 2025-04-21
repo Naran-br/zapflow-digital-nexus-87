@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Zap, CheckCircle2 } from "lucide-react";
 
@@ -12,7 +11,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="section bg-gray-50">
+    <section id="about" className="section bg-[#303030]">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 order-2 lg:order-1">
@@ -20,15 +19,15 @@ const AboutSection = () => {
               <Zap size={16} className="text-zapflow-600" />
               <span className="text-sm font-medium">Sobre o zapFlow</span>
             </div>
-            <h2 className="text-zapflow-950">
+            <h2 className="text-white">
               Inovação e tecnologia para <span className="text-zapflow-600">impulsionar</span> seu negócio
             </h2>
-            <p className="text-gray-700 text-lg">
+            <p className="text-gray-300 text-lg">
               O zapFlow nasceu da paixão por tecnologia e da busca constante por
               inovação. Somos especialistas em criar soluções digitais que transformam
               a maneira como as empresas operam e se relacionam com seus clientes.
             </p>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Nossa missão é democratizar o acesso à tecnologia de ponta, tornando-a
               acessível e funcional para empresas de todos os tamanhos. Acreditamos
               que a automação inteligente e a presença digital estratégica são 
@@ -38,7 +37,7 @@ const AboutSection = () => {
               {highlights.map((item, index) => (
                 <div key={index} className="flex items-start gap-2">
                   <CheckCircle2 size={20} className="text-zapflow-600 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">{item}</span>
+                  <span className="text-gray-300">{item}</span>
                 </div>
               ))}
             </div>
@@ -69,5 +68,4 @@ const AboutSection = () => {
     </section>
   );
 };
-
 export default AboutSection;
