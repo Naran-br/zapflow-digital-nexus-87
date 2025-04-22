@@ -58,8 +58,8 @@ export default {
 					200: '#c1d7fe',
 					300: '#93b9fc',
 					400: '#6091f7',
-					500: '#01f05a', // Change to the desired green
-					600: '#01f05a', // Ensure green is consistently used
+					500: '#01f05a', // Green color
+					600: '#01f05a', 
 					700: '#01f05a', 
 					800: '#01f05a',
 					900: '#01f05a',
