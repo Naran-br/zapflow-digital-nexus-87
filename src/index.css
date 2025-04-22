@@ -122,11 +122,11 @@
   }
   
   .btn-primary {
-    @apply bg-primary text-[#303030] py-2 px-6 rounded-md transition-all hover:bg-green-600;
+    @apply bg-zapflow-600 text-[#303030] py-2 px-6 rounded-md transition-all hover:bg-zapflow-500;
   }
   
   .btn-secondary {
-    @apply bg-white text-[#303030] hover:text-primary-foreground py-2 px-6 rounded-md border border-primary transition-all hover:bg-primary hover:text-white;
+    @apply bg-transparent text-zapflow-600 hover:text-[#303030] py-2 px-6 rounded-md border border-zapflow-600 transition-all hover:bg-zapflow-600 hover:text-[#303030];
   }
 
   .card-hover {

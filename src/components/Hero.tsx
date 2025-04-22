@@ -1,3 +1,4 @@
+
 import React from "react";
 import { ArrowRight } from "lucide-react";
 
@@ -7,10 +8,10 @@ const Hero = () => {
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 max-w-2xl animate-fade-in">
-            <h1 className="font-bold text-zapflow-950">
+            <h1 className="font-bold text-zapflow-600">
               Transforme seu negócio com soluções digitais <span className="text-zapflow-600">personalizadas</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-700">
+            <p className="text-lg md:text-xl text-gray-300">
               O zapFlow oferece soluções completas em tecnologia para empresas que buscam inovação, automatização e eficiência.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">

@@ -38,7 +38,7 @@ const NavBar = () => {
     )}>
       <div className="container-custom">
         <nav className="flex items-center justify-between py-4">
-          <a href="#home" className="text-2xl font-bold text-zapflow-800">
+          <a href="#home" className="text-2xl font-bold text-zapflow-600">
             zap<span className="text-zapflow-600">Flow</span>
           </a>
           
@@ -48,7 +48,7 @@ const NavBar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-700 hover:text-zapflow-600 transition-colors"
+                className="text-gray-300 hover:text-zapflow-600 transition-colors"
               >
                 {link.name}
               </a>
@@ -61,20 +61,20 @@ const NavBar = () => {
           </a>
           
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-gray-700" onClick={toggleMenu}>
+          <button className="md:hidden text-gray-300" onClick={toggleMenu}>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </nav>
         
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden py-4 bg-white">
+          <div className="md:hidden py-4 bg-[#303030]">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-700 hover:text-zapflow-600 transition-colors px-4 py-2"
+                  className="text-gray-300 hover:text-zapflow-600 transition-colors px-4 py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
