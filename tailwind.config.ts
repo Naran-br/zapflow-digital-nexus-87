@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -59,12 +58,12 @@ export default {
 					200: '#c1d7fe',
 					300: '#93b9fc',
 					400: '#6091f7',
-					500: '#3b6cf1',
-					600: '#2a51e4',
-					700: '#2240cc',
-					800: '#2137a5',
-					900: '#213483',
-					950: '#182151',
+					500: '#01f05a', // Change to the desired green
+					600: '#01f05a', // Ensure green is consistently used
+					700: '#01f05a', 
+					800: '#01f05a',
+					900: '#01f05a',
+					950: '#01f05a',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
