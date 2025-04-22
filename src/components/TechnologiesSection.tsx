@@ -1,61 +1,52 @@
 
 import React from "react";
-import { Braces, Database, Bot, Calendar, Cloud, MessageSquare, LineChart } from "lucide-react";
 
 const technologies = [
   {
-    icon: <Braces className="h-12 w-12 p-2 text-white" />,
     name: "n8n",
     description: "Plataforma de automação de fluxos de trabalho com conexões versáteis entre aplicativos.",
-    bgColor: "bg-orange-500",
+    logo: "/lovable-uploads/e7439396-feb0-421b-ad1a-0a7d47c19b65.png",
   },
   {
-    icon: <Bot className="h-12 w-12 p-2 text-white" />,
-    name: "LLM's da OpenAI",
+    name: "OpenAI",
     description: "Modelos de linguagem avançados para geração de conteúdo e interações inteligentes.",
-    bgColor: "bg-teal-600",
+    logo: "/lovable-uploads/e84a0c2c-d495-4075-9801-6477e2d7006d.png",
   },
   {
-    icon: <Database className="h-12 w-12 p-2 text-white" />,
     name: "Supabase",
     description: "Plataforma open source para desenvolvimento de aplicações com banco de dados PostgreSQL.",
-    bgColor: "bg-emerald-600",
+    logo: "/lovable-uploads/44540bd3-38a2-4d59-9619-6e45e51d513a.png",
   },
+  // Placeholder for other technologies until you provide their logos
   {
-    icon: <Cloud className="h-12 w-12 p-2 text-white" />,
     name: "Redis",
     description: "Armazenamento de dados em memória para alta performance e cache avançado.",
-    bgColor: "bg-red-600",
+    logo: "", // Will be updated when logo is provided
   },
   {
-    icon: <MessageSquare className="h-12 w-12 p-2 text-white" />,
-    name: "API do WhatsApp e Evolution API",
+    name: "WhatsApp",
     description: "Integração oficial e avançada com WhatsApp para comunicação eficiente.",
-    bgColor: "bg-green-600",
+    logo: "", // Will be updated when logo is provided
   },
   {
-    icon: <Calendar className="h-12 w-12 p-2 text-white" />,
     name: "Cal.com",
     description: "Sistema de agendamento intuitivo para gerenciamento de compromissos.",
-    bgColor: "bg-indigo-600",
+    logo: "", // Will be updated when logo is provided
   },
   {
-    icon: <Cloud className="h-12 w-12 p-2 text-white" />,
-    name: "APIs do Google e LLM's",
+    name: "Google",
     description: "Conjunto de ferramentas do Google para diversas funcionalidades e IA avançada.",
-    bgColor: "bg-blue-600",
+    logo: "", // Will be updated when logo is provided
   },
   {
-    icon: <Bot className="h-12 w-12 p-2 text-white" />,
     name: "Typebot",
     description: "Criação de chatbots conversacionais com interfaces visuais e integrações.",
-    bgColor: "bg-purple-600",
+    logo: "", // Will be updated when logo is provided
   },
   {
-    icon: <LineChart className="h-12 w-12 p-2 text-white" />,
     name: "Dify",
     description: "Plataforma de desenvolvimento de aplicações de IA com interfaces avançadas.",
-    bgColor: "bg-violet-600",
+    logo: "", // Will be updated when logo is provided
   },
 ];
 
@@ -78,11 +69,21 @@ const TechnologiesSection = () => {
               className="bg-[#222] rounded-lg shadow-sm border border-gray-700 overflow-hidden card-hover"
             >
               <div className="flex items-start p-6">
-                <div className={`${tech.bgColor} rounded-lg p-2 mr-4`}>
-                  {tech.icon}
+                <div className="bg-white rounded-lg p-4 mr-4 w-16 h-16 flex items-center justify-center">
+                  {tech.logo ? (
+                    <img 
+                      src={tech.logo} 
+                      alt={`${tech.name} logo`} 
+                      className="w-full h-full object-contain"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gray-200 rounded-lg animate-pulse" />
+                  )}
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-zapflow-200">{tech.name}</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-zapflow-200">
+                    {tech.name}
+                  </h3>
                   <p className="text-gray-300">{tech.description}</p>
                 </div>
               </div>

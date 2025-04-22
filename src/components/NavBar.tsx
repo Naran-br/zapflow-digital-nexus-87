@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -33,12 +34,12 @@ const NavBar = () => {
 
   return (
     <header className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      scrolled ? "bg-white/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-sm",
+      scrolled ? "border-b border-gray-200" : ""
     )}>
       <div className="container-custom">
         <nav className="flex items-center justify-between py-4">
-          <a href="#home" className="text-2xl font-bold text-zapflow-600">
+          <a href="#home" className="text-2xl font-bold text-[#303030]">
             zap<span className="text-zapflow-600">Flow</span>
           </a>
           
@@ -48,7 +49,7 @@ const NavBar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-zapflow-600 transition-colors"
+                className="text-[#303030] hover:text-zapflow-600 transition-colors"
               >
                 {link.name}
               </a>
@@ -61,20 +62,20 @@ const NavBar = () => {
           </a>
           
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-gray-300" onClick={toggleMenu}>
+          <button className="md:hidden text-[#303030]" onClick={toggleMenu}>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </nav>
         
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden py-4 bg-[#303030]">
+          <div className="md:hidden py-4 bg-white border-t border-gray-200">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-300 hover:text-zapflow-600 transition-colors px-4 py-2"
+                  className="text-[#303030] hover:text-zapflow-600 transition-colors px-4 py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
