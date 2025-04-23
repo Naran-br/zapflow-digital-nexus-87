@@ -19,17 +19,17 @@ const technologies = [
   {
     name: "Redis",
     description: "Armazenamento de dados em memória para alta performance e cache avançado.",
-    logo: "", // Placeholder for future logo
+    logo: "/lovable-uploads/6e782601-d997-4a13-bd84-7f458a151cf0.png",
   },
   {
     name: "WhatsApp",
     description: "Integração oficial e avançada com WhatsApp para comunicação eficiente.",
-    logo: "", // Placeholder for future logo
+    logo: "/lovable-uploads/1105830b-1c95-4c94-8253-44bb57358877.png",
   },
   {
     name: "Cal.com",
     description: "Sistema de agendamento intuitivo para gerenciamento de compromissos.",
-    logo: "", // Placeholder for future logo
+    logo: "/lovable-uploads/554c27a4-4e6e-4ad9-8b63-788e79ac4acf.png",
   },
   {
     name: "Google",
