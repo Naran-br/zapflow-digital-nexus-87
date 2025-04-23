@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Phone, Mail, MapPin, Send, CheckCircle } from "lucide-react";
 
@@ -37,11 +36,11 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="section bg-zapflow-950 text-white">
+    <section id="contact" className="section bg-zapflow-950 text-black">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="mb-4">Entre em Contato</h2>
-          <p className="text-zapflow-100 text-lg">
+          <h2 className="mb-4 text-black">Entre em Contato</h2>
+          <p className="text-black text-lg">
             Estamos prontos para ajudar a transformar seu negócio com tecnologia
             de ponta. Envie-nos uma mensagem e entraremos em contato em breve.
           </p>
@@ -50,38 +49,38 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2 space-y-8">
             <div>
-              <h3 className="text-xl font-semibold mb-6">Informações de Contato</h3>
+              <h3 className="text-xl font-semibold mb-6 text-black">Informações de Contato</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
                   <Phone className="text-zapflow-400 mr-4 mt-1" size={20} />
                   <div>
-                    <h4 className="font-medium text-zapflow-200">Telefone</h4>
-                    <p>(11) 98765-4321</p>
+                    <h4 className="font-medium text-black">Telefone</h4>
+                    <p className="text-black">(11) 98765-4321</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Mail className="text-zapflow-400 mr-4 mt-1" size={20} />
                   <div>
-                    <h4 className="font-medium text-zapflow-200">Email</h4>
-                    <p>contato@zapflow.com.br</p>
+                    <h4 className="font-medium text-black">Email</h4>
+                    <p className="text-black">contato@zapflow.com.br</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <MapPin className="text-zapflow-400 mr-4 mt-1" size={20} />
                   <div>
-                    <h4 className="font-medium text-zapflow-200">Endereço</h4>
-                    <p>Rua da Inovação, 123 - São Paulo, SP</p>
+                    <h4 className="font-medium text-black">Endereço</h4>
+                    <p className="text-black">Rua da Inovação, 123 - São Paulo, SP</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="pt-6">
-              <h3 className="text-xl font-semibold mb-6">Horário de Atendimento</h3>
+              <h3 className="text-xl font-semibold mb-6 text-black">Horário de Atendimento</h3>
               <div className="space-y-2">
-                <p>Segunda a Sexta: 9h às 18h</p>
-                <p>Sábado: 9h às 13h</p>
-                <p>Domingo: Fechado</p>
+                <p className="text-black">Segunda a Sexta: 9h às 18h</p>
+                <p className="text-black">Sábado: 9h às 13h</p>
+                <p className="text-black">Domingo: Fechado</p>
               </div>
             </div>
           </div>
@@ -90,8 +89,8 @@ const ContactSection = () => {
             {submitted ? (
               <div className="bg-zapflow-900 p-8 rounded-lg h-full flex flex-col items-center justify-center text-center">
                 <CheckCircle className="h-16 w-16 text-green-500 mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Mensagem Enviada!</h3>
-                <p className="text-zapflow-200">
+                <h3 className="text-xl font-semibold mb-2 text-black">Mensagem Enviada!</h3>
+                <p className="text-black">
                   Obrigado por entrar em contato. Retornaremos em breve.
                 </p>
               </div>
@@ -99,7 +98,7 @@ const ContactSection = () => {
               <form onSubmit={handleSubmit} className="bg-zapflow-900 p-8 rounded-lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-zapflow-200 mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-black mb-2">
                       Nome Completo
                     </label>
                     <input
@@ -108,12 +107,12 @@ const ContactSection = () => {
                       name="name"
                       value={formState.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 rounded-md bg-zapflow-800 border border-zapflow-700 text-white focus:outline-none focus:ring-1 focus:ring-zapflow-500"
+                      className="w-full px-4 py-2 rounded-md bg-zapflow-800 border border-zapflow-700 text-black focus:outline-none focus:ring-1 focus:ring-zapflow-500"
                       required
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-zapflow-200 mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-black mb-2">
                       E-mail
                     </label>
                     <input
@@ -130,7 +129,7 @@ const ContactSection = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-zapflow-200 mb-2">
+                    <label htmlFor="phone" className="block text-sm font-medium text-black mb-2">
                       Telefone
                     </label>
                     <input
@@ -143,7 +142,7 @@ const ContactSection = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-zapflow-200 mb-2">
+                    <label htmlFor="subject" className="block text-sm font-medium text-black mb-2">
                       Assunto
                     </label>
                     <select
@@ -166,7 +165,7 @@ const ContactSection = () => {
                 </div>
 
                 <div className="mb-6">
-                  <label htmlFor="message" className="block text-sm font-medium text-zapflow-200 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-black mb-2">
                     Mensagem
                   </label>
                   <textarea
@@ -182,7 +181,7 @@ const ContactSection = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-zapflow-600 hover:bg-zapflow-700 text-white py-3 px-4 rounded-md transition-colors flex items-center justify-center"
+                  className="w-full bg-zapflow-600 hover:bg-zapflow-700 text-black py-3 px-4 rounded-md transition-colors flex items-center justify-center"
                 >
                   Enviar Mensagem
                   <Send size={16} className="ml-2" />
