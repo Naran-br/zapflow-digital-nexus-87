@@ -19,12 +19,12 @@ const technologies = [
   {
     name: "Redis",
     description: "Armazenamento de dados em memória para alta performance e cache avançado.",
-    logo: "/lovable-uploads/6e782601-d997-4a13-bd84-7f458a151cf0.png",
+    logo: "/lovable-uploads/1105830b-1c95-4c94-8253-44bb57358877.png", // Corrected WhatsApp logo for Redis
   },
   {
     name: "WhatsApp",
     description: "Integração oficial e avançada com WhatsApp para comunicação eficiente.",
-    logo: "/lovable-uploads/1105830b-1c95-4c94-8253-44bb57358877.png",
+    logo: "/lovable-uploads/6e782601-d997-4a13-bd84-7f458a151cf0.png", // Corrected Redis logo for WhatsApp
   },
   {
     name: "Cal.com",
