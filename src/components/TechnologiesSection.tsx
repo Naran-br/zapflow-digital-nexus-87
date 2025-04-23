@@ -1,52 +1,50 @@
-
 import React from "react";
 
 const technologies = [
   {
     name: "n8n",
     description: "Plataforma de automação de fluxos de trabalho com conexões versáteis entre aplicativos.",
-    logo: "/lovable-uploads/e7439396-feb0-421b-ad1a-0a7d47c19b65.png",
+    logo: "/lovable-uploads/72467222-5770-4089-9e17-92013fb34620.png",
   },
   {
     name: "OpenAI",
     description: "Modelos de linguagem avançados para geração de conteúdo e interações inteligentes.",
-    logo: "/lovable-uploads/e84a0c2c-d495-4075-9801-6477e2d7006d.png",
+    logo: "/lovable-uploads/9835c392-bcf5-43dd-a372-a4651bbba7b9.png",
   },
   {
     name: "Supabase",
     description: "Plataforma open source para desenvolvimento de aplicações com banco de dados PostgreSQL.",
-    logo: "/lovable-uploads/44540bd3-38a2-4d59-9619-6e45e51d513a.png",
+    logo: "/lovable-uploads/39c5c128-70db-4c3e-808a-6d1fd283c063.png",
   },
-  // Placeholder for other technologies until you provide their logos
   {
     name: "Redis",
     description: "Armazenamento de dados em memória para alta performance e cache avançado.",
-    logo: "", // Will be updated when logo is provided
+    logo: "", // Placeholder for future logo
   },
   {
     name: "WhatsApp",
     description: "Integração oficial e avançada com WhatsApp para comunicação eficiente.",
-    logo: "", // Will be updated when logo is provided
+    logo: "", // Placeholder for future logo
   },
   {
     name: "Cal.com",
     description: "Sistema de agendamento intuitivo para gerenciamento de compromissos.",
-    logo: "", // Will be updated when logo is provided
+    logo: "", // Placeholder for future logo
   },
   {
     name: "Google",
     description: "Conjunto de ferramentas do Google para diversas funcionalidades e IA avançada.",
-    logo: "", // Will be updated when logo is provided
+    logo: "", // Placeholder for future logo
   },
   {
     name: "Typebot",
     description: "Criação de chatbots conversacionais com interfaces visuais e integrações.",
-    logo: "", // Will be updated when logo is provided
+    logo: "", // Placeholder for future logo
   },
   {
     name: "Dify",
     description: "Plataforma de desenvolvimento de aplicações de IA com interfaces avançadas.",
-    logo: "", // Will be updated when logo is provided
+    logo: "", // Placeholder for future logo
   },
 ];
 
