@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Phone, Mail, MapPin, Send, CheckCircle } from "lucide-react";
 
@@ -107,7 +108,7 @@ const ContactSection = () => {
                       name="name"
                       value={formState.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 rounded-md bg-zapflow-800 border border-zapflow-700 text-black focus:outline-none focus:ring-1 focus:ring-zapflow-500"
+                      className="w-full px-4 py-2 rounded-md bg-white border border-zapflow-700 text-black focus:outline-none focus:ring-1 focus:ring-zapflow-500"
                       required
                     />
                   </div>
@@ -121,7 +122,7 @@ const ContactSection = () => {
                       name="email"
                       value={formState.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 rounded-md bg-zapflow-800 border border-zapflow-700 text-white focus:outline-none focus:ring-1 focus:ring-zapflow-500"
+                      className="w-full px-4 py-2 rounded-md bg-white border border-zapflow-700 text-black focus:outline-none focus:ring-1 focus:ring-zapflow-500"
                       required
                     />
                   </div>
@@ -138,7 +139,7 @@ const ContactSection = () => {
                       name="phone"
                       value={formState.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 rounded-md bg-zapflow-800 border border-zapflow-700 text-white focus:outline-none focus:ring-1 focus:ring-zapflow-500"
+                      className="w-full px-4 py-2 rounded-md bg-white border border-zapflow-700 text-black focus:outline-none focus:ring-1 focus:ring-zapflow-500"
                     />
                   </div>
                   <div>
@@ -150,7 +151,7 @@ const ContactSection = () => {
                       name="subject"
                       value={formState.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 rounded-md bg-zapflow-800 border border-zapflow-700 text-white focus:outline-none focus:ring-1 focus:ring-zapflow-500"
+                      className="w-full px-4 py-2 rounded-md bg-white border border-zapflow-700 text-black focus:outline-none focus:ring-1 focus:ring-zapflow-500"
                       required
                     >
                       <option value="" disabled>Selecione uma opção</option>
@@ -174,7 +175,7 @@ const ContactSection = () => {
                     rows={5}
                     value={formState.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 rounded-md bg-zapflow-800 border border-zapflow-700 text-white focus:outline-none focus:ring-1 focus:ring-zapflow-500"
+                    className="w-full px-4 py-2 rounded-md bg-white border border-zapflow-700 text-black focus:outline-none focus:ring-1 focus:ring-zapflow-500"
                     required
                   ></textarea>
                 </div>
