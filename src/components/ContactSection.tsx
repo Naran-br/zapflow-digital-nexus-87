@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Phone, Mail, MapPin, Send, CheckCircle } from "lucide-react";
 
@@ -36,7 +37,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="section bg-black text-zapflow-500">
+    <section id="contact" className="section bg-[#000000] text-zapflow-500">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="mb-4 text-zapflow-500">Entre em Contato</h2>
@@ -87,7 +88,7 @@ const ContactSection = () => {
 
           <div className="lg:col-span-3">
             {submitted ? (
-              <div className="bg-[#221F26] p-8 rounded-lg h-full flex flex-col items-center justify-center text-center">
+              <div className="bg-[#000000] border border-zapflow-500 p-8 rounded-lg h-full flex flex-col items-center justify-center text-center">
                 <CheckCircle className="h-16 w-16 text-zapflow-500 mb-4" />
                 <h3 className="text-xl font-semibold mb-2 text-zapflow-500">Mensagem Enviada!</h3>
                 <p className="text-zapflow-500">
@@ -95,7 +96,7 @@ const ContactSection = () => {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="bg-[#221F26] p-8 rounded-lg">
+              <form onSubmit={handleSubmit} className="bg-[#000000] border border-zapflow-500 p-8 rounded-lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-zapflow-500 mb-2">
