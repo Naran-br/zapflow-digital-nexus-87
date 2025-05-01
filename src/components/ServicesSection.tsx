@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Globe, Cpu, MessageSquare, Calendar, Lightbulb } from "lucide-react";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -35,36 +36,86 @@ const services = [
   },
 ];
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  show: { 
+    y: 0, 
+    opacity: 1,
+    transition: {
+      duration: 0.5
+    }
+  }
+};
+
 const ServicesSection = () => {
   return (
     <section id="services" className="section bg-[#303030]">
       <div className="container-custom">
-        <div className="text-center max-w-3xl mx-auto mb-16 parallax-element" data-speed="0.15">
+        <motion.div 
+          className="text-center max-w-3xl mx-auto mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-50px" }}
+        >
           <h2 className="mb-4 text-white">Nossos Serviços</h2>
           <p className="text-gray-300 text-lg">
             Oferecemos soluções tecnológicas completas para transformar e 
             modernizar seu negócio, aumentando eficiência e resultados.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white p-8 rounded-lg shadow-lg border border-gray-100 card-hover"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="bg-white p-8 rounded-lg shadow-lg border border-gray-100"
+              variants={item}
+              whileHover={{ 
+                scale: 1.03, 
+                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" 
+              }}
             >
-              <div className="mb-5">{service.icon}</div>
+              <motion.div 
+                className="mb-5"
+                whileHover={{ 
+                  rotate: [0, -10, 10, -10, 0],
+                  transition: { duration: 0.5 }
+                }}
+              >
+                {service.icon}
+              </motion.div>
               <h3 className="text-xl font-semibold mb-3 text-zapflow-800">{service.title}</h3>
               <p className="text-gray-600">{service.description}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <div className="mt-16 text-center">
-          <a href="#contact" className="btn-primary inline-block">
+          <motion.a 
+            href="#contact" 
+            className="btn-primary inline-block"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             Solicitar Orçamento
-          </a>
+          </motion.a>
         </div>
       </div>
     </section>

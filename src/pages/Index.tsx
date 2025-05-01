@@ -1,5 +1,6 @@
 
 import React, { useEffect } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import ServicesSection from "@/components/ServicesSection";
@@ -17,50 +18,93 @@ const Index = () => {
     document.title = "zapFlow - Soluções Tecnológicas Inovadoras";
   }, []);
 
-  // Parallax effect on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      const parallaxElements = document.querySelectorAll('.parallax-element');
-      
-      parallaxElements.forEach(element => {
-        const scrollPosition = window.scrollY;
-        const speed = element.getAttribute('data-speed') || 0.3;
-        const yPos = -scrollPosition * Number(speed);
-        
-        // Apply transform
-        (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
-      });
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const { scrollY } = useScroll();
 
   return (
     <div className="min-h-screen">
       <NavBar />
       <main>
         {/* Logo da zapFlow centralizado */}
-        <div className="flex justify-center py-10 bg-black">
-          <img
+        <motion.div 
+          className="flex justify-center py-14 bg-black"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.img
             src="/lovable-uploads/8e67d253-935d-4359-9c6d-41e8abf08136.png"
             alt="Logo zapFlow"
             className="max-w-xs sm:max-w-sm md:max-w-md"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
           />
-        </div>
+        </motion.div>
         <Hero />
         <Separator className="section-divider" />
-        <ServicesSection />
+        
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <ServicesSection />
+        </motion.div>
+        
         <Separator className="section-divider" />
-        <AboutSection />
+        
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <AboutSection />
+        </motion.div>
+        
         <Separator className="section-divider" />
-        <TechnologiesSection />
+        
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <TechnologiesSection />
+        </motion.div>
+        
         <Separator className="section-divider" />
-        <PortfolioSection />
+        
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <PortfolioSection />
+        </motion.div>
+        
         <Separator className="section-divider" />
-        <TestimonialsSection />
+        
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <TestimonialsSection />
+        </motion.div>
+        
         <Separator className="section-divider" />
-        <ContactSection />
+        
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <ContactSection />
+        </motion.div>
       </main>
       <Footer />
     </div>
