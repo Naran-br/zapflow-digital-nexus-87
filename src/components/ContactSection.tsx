@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Phone, Mail, MapPin, Send, CheckCircle } from "lucide-react";
 
@@ -38,7 +39,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="section bg-[#303030] text-zapflow-500">
       <div className="container-custom">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 parallax-element" data-speed="0.15">
           <h2 className="mb-4 text-zapflow-500">Entre em Contato</h2>
           <p className="text-zapflow-500 text-lg">
             Estamos prontos para ajudar a transformar seu negócio com tecnologia
@@ -95,7 +96,7 @@ const ContactSection = () => {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="bg-[#303030] border border-zapflow-500 p-8 rounded-lg">
+              <form onSubmit={handleSubmit} className="bg-[#303030] border border-zapflow-500 p-8 rounded-lg shadow-lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-zapflow-500 mb-2">
@@ -107,7 +108,7 @@ const ContactSection = () => {
                       name="name"
                       value={formState.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 rounded-md bg-white text-black border border-zapflow-500 focus:outline-none focus:ring-1 focus:ring-zapflow-500"
+                      className="w-full px-4 py-2 rounded-full bg-white text-black border border-zapflow-500 focus:outline-none focus:ring-1 focus:ring-zapflow-500 transition-all duration-300"
                       required
                     />
                   </div>
@@ -121,7 +122,7 @@ const ContactSection = () => {
                       name="email"
                       value={formState.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 rounded-md bg-white text-black border border-zapflow-500 focus:outline-none focus:ring-1 focus:ring-zapflow-500"
+                      className="w-full px-4 py-2 rounded-full bg-white text-black border border-zapflow-500 focus:outline-none focus:ring-1 focus:ring-zapflow-500 transition-all duration-300"
                       required
                     />
                   </div>
@@ -138,7 +139,7 @@ const ContactSection = () => {
                       name="phone"
                       value={formState.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 rounded-md bg-white text-black border border-zapflow-500 focus:outline-none focus:ring-1 focus:ring-zapflow-500"
+                      className="w-full px-4 py-2 rounded-full bg-white text-black border border-zapflow-500 focus:outline-none focus:ring-1 focus:ring-zapflow-500 transition-all duration-300"
                     />
                   </div>
                   <div>
@@ -150,7 +151,7 @@ const ContactSection = () => {
                       name="subject"
                       value={formState.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 rounded-md bg-white text-black border border-zapflow-500 focus:outline-none focus:ring-1 focus:ring-zapflow-500"
+                      className="w-full px-4 py-2 rounded-full bg-white text-black border border-zapflow-500 focus:outline-none focus:ring-1 focus:ring-zapflow-500 transition-all duration-300"
                       required
                     >
                       <option value="" disabled className="text-zapflow-500">Selecione uma opção</option>
@@ -174,14 +175,14 @@ const ContactSection = () => {
                     rows={5}
                     value={formState.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 rounded-md bg-white text-black border border-zapflow-500 focus:outline-none focus:ring-1 focus:ring-zapflow-500"
+                    className="w-full px-4 py-2 rounded-lg bg-white text-black border border-zapflow-500 focus:outline-none focus:ring-1 focus:ring-zapflow-500 transition-all duration-300"
                     required
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-zapflow-500 hover:bg-zapflow-600 text-black py-3 px-4 rounded-md transition-colors flex items-center justify-center"
+                  className="w-full bg-zapflow-500 hover:bg-zapflow-600 text-black py-3 px-4 rounded-full transition-all duration-300 font-medium flex items-center justify-center hover:shadow-lg hover:shadow-zapflow-500/20 transform hover:-translate-y-1"
                 >
                   Enviar Mensagem
                   <Send size={16} className="ml-2" />

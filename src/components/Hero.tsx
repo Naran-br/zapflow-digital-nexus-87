@@ -26,7 +26,7 @@ const Hero = () => {
           <div className="hidden lg:block">
             <div className="relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-zapflow-500 to-zapflow-700 rounded-lg blur-lg opacity-30 animate-pulse"></div>
-              <div className="relative bg-white p-8 rounded-lg shadow-xl">
+              <div className="relative bg-white p-8 rounded-lg shadow-xl animate-float">
                 <div className="space-y-6">
                   <div className="bg-gray-100 h-10 w-3/4 rounded-md"></div>
                   <div className="space-y-2">
@@ -39,8 +39,8 @@ const Hero = () => {
                     <div className="bg-gray-200 h-10 w-32 rounded-md"></div>
                   </div>
                 </div>
-                <div className="absolute -bottom-4 -right-4 h-24 w-24 bg-zapflow-600 rounded-full opacity-10"></div>
-                <div className="absolute -top-4 -left-4 h-16 w-16 bg-zapflow-400 rounded-full opacity-10"></div>
+                <div className="absolute -bottom-4 -right-4 h-24 w-24 bg-zapflow-600 rounded-full opacity-10 animate-pulse"></div>
+                <div className="absolute -top-4 -left-4 h-16 w-16 bg-zapflow-400 rounded-full opacity-10 animate-pulse"></div>
               </div>
             </div>
           </div>

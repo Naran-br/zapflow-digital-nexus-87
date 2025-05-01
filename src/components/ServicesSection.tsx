@@ -39,7 +39,7 @@ const ServicesSection = () => {
   return (
     <section id="services" className="section bg-[#303030]">
       <div className="container-custom">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 parallax-element" data-speed="0.15">
           <h2 className="mb-4 text-white">Nossos Serviços</h2>
           <p className="text-gray-300 text-lg">
             Oferecemos soluções tecnológicas completas para transformar e 
@@ -51,7 +51,8 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 card-hover"
+              className="bg-white p-8 rounded-lg shadow-lg border border-gray-100 card-hover"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="mb-5">{service.icon}</div>
               <h3 className="text-xl font-semibold mb-3 text-zapflow-800">{service.title}</h3>
@@ -71,4 +72,3 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
-

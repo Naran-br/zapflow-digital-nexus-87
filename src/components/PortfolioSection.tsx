@@ -45,7 +45,7 @@ const PortfolioSection = () => {
   return (
     <section id="portfolio" className="section bg-[#303030]">
       <div className="container-custom">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 parallax-element" data-speed="0.2">
           <h2 className="mb-4 text-white">Nosso Portfólio</h2>
           <p className="text-gray-300 text-lg">
             Conheça alguns dos projetos que desenvolvemos e como ajudamos nossos
@@ -57,7 +57,8 @@ const PortfolioSection = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="rounded-lg overflow-hidden bg-[#222] shadow-sm border border-gray-700 card-hover"
+              className="rounded-lg overflow-hidden bg-[#222] shadow-lg border border-gray-700 card-hover"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <div 
                 className={`h-48 ${project.image} flex items-center justify-center p-6`}
@@ -76,7 +77,7 @@ const PortfolioSection = () => {
                 <p className="text-gray-300 mb-4">{project.description}</p>
                 <a
                   href="#"
-                  className="inline-flex items-center text-zapflow-400 hover:text-zapflow-200 font-medium"
+                  className="inline-flex items-center text-zapflow-400 hover:text-zapflow-200 font-medium transition-all duration-300 hover:translate-x-1"
                 >
                   Ver Detalhes
                   <ExternalLink size={16} className="ml-1" />

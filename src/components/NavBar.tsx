@@ -39,9 +39,11 @@ const NavBar = () => {
     )}>
       <div className="container-custom">
         <nav className="flex items-center justify-between py-4">
-          <a href="#home" className="text-2xl font-bold text-[#303030]">
-            zap<span className="text-zapflow-600">Flow</span>
-          </a>
+          <div className="flex items-center justify-center w-full md:w-auto">
+            <a href="#home" className="text-2xl font-bold text-[#303030] mx-auto md:mx-0">
+              zap<span className="text-zapflow-600">Flow</span>
+            </a>
+          </div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
@@ -49,7 +51,7 @@ const NavBar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-[#303030] hover:text-zapflow-600 transition-colors"
+                className="text-[#303030] hover:text-zapflow-600 transition-colors font-medium"
               >
                 {link.name}
               </a>
@@ -62,7 +64,7 @@ const NavBar = () => {
           </a>
           
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-[#303030]" onClick={toggleMenu}>
+          <button className="md:hidden text-[#303030] absolute right-6" onClick={toggleMenu}>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </nav>
@@ -75,7 +77,7 @@ const NavBar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-[#303030] hover:text-zapflow-600 transition-colors px-4 py-2"
+                  className="text-[#303030] hover:text-zapflow-600 transition-colors px-6 py-2 font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -83,7 +85,7 @@ const NavBar = () => {
               ))}
               <a 
                 href="#contact" 
-                className="btn-primary mx-4 text-center"
+                className="btn-primary mx-6 text-center"
                 onClick={() => setIsOpen(false)}
               >
                 Fale Conosco

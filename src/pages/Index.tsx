@@ -9,11 +9,31 @@ import PortfolioSection from "@/components/PortfolioSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import { Separator } from "@/components/ui/separator";
 
 const Index = () => {
   // Update page title
   useEffect(() => {
     document.title = "zapFlow - Soluções Tecnológicas Inovadoras";
+  }, []);
+
+  // Parallax effect on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const parallaxElements = document.querySelectorAll('.parallax-element');
+      
+      parallaxElements.forEach(element => {
+        const scrollPosition = window.scrollY;
+        const speed = element.getAttribute('data-speed') || 0.3;
+        const yPos = -scrollPosition * Number(speed);
+        
+        // Apply transform
+        (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
+      });
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -29,11 +49,17 @@ const Index = () => {
           />
         </div>
         <Hero />
+        <Separator className="section-divider" />
         <ServicesSection />
+        <Separator className="section-divider" />
         <AboutSection />
+        <Separator className="section-divider" />
         <TechnologiesSection />
+        <Separator className="section-divider" />
         <PortfolioSection />
+        <Separator className="section-divider" />
         <TestimonialsSection />
+        <Separator className="section-divider" />
         <ContactSection />
       </main>
       <Footer />
@@ -42,4 +68,3 @@ const Index = () => {
 };
 
 export default Index;
-

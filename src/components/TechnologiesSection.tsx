@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const technologies = [
@@ -19,12 +20,12 @@ const technologies = [
   {
     name: "Redis",
     description: "Armazenamento de dados em memória para alta performance e cache avançado.",
-    logo: "/lovable-uploads/1105830b-1c95-4c94-8253-44bb57358877.png", // Corrected WhatsApp logo for Redis
+    logo: "/lovable-uploads/1105830b-1c95-4c94-8253-44bb57358877.png", 
   },
   {
     name: "WhatsApp",
     description: "Integração oficial e avançada com WhatsApp para comunicação eficiente.",
-    logo: "/lovable-uploads/6e782601-d997-4a13-bd84-7f458a151cf0.png", // Corrected Redis logo for WhatsApp
+    logo: "/lovable-uploads/6e782601-d997-4a13-bd84-7f458a151cf0.png", 
   },
   {
     name: "Cal.com",
@@ -52,7 +53,7 @@ const TechnologiesSection = () => {
   return (
     <section id="technologies" className="section bg-[#303030]">
       <div className="container-custom">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 parallax-element" data-speed="0.2">
           <h2 className="mb-4 text-white">Tecnologias Utilizadas</h2>
           <p className="text-gray-300 text-lg">
             Trabalhamos com as mais avançadas tecnologias do mercado para garantir
@@ -65,6 +66,7 @@ const TechnologiesSection = () => {
             <div
               key={index}
               className="bg-[#222] rounded-lg shadow-sm border border-gray-700 overflow-hidden card-hover"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="flex items-start p-6">
                 <div className="bg-white rounded-lg p-4 mr-4 w-16 h-16 flex items-center justify-center">
