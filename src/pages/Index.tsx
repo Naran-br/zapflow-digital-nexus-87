@@ -10,6 +10,7 @@ import PortfolioSection from "@/components/PortfolioSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import LogoBackground from "@/components/LogoBackground";
 import { Separator } from "@/components/ui/separator";
 
 const Index = () => {
@@ -26,15 +27,18 @@ const Index = () => {
       <main>
         {/* Logo da zapFlow centralizado */}
         <motion.div 
-          className="flex justify-center py-14 bg-black"
+          className="flex justify-center py-32 bg-black relative"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
+          {/* Three.js background for the logo section */}
+          <LogoBackground />
+          
           <motion.img
             src="/lovable-uploads/8e67d253-935d-4359-9c6d-41e8abf08136.png"
             alt="Logo zapFlow"
-            className="max-w-xs sm:max-w-sm md:max-w-md"
+            className="max-w-xs sm:max-w-sm md:max-w-md relative z-10"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           />

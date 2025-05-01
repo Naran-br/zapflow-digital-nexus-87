@@ -1,6 +1,6 @@
 
-import React, { useRef, useMemo } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import React, { useRef, useMemo, useState, useEffect } from "react";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useIsMobile } from "@/hooks/use-mobile";
 import * as THREE from "three";
 
@@ -17,7 +17,7 @@ const Particle = ({ position, color, speed }: { position: [number, number, numbe
 
   return (
     <mesh ref={mesh} position={position}>
-      <sphereGeometry args={[0.2, 16, 16]} />
+      <sphereGeometry args={[0.15, 8, 8]} />
       <meshStandardMaterial color={color} transparent opacity={0.7} />
     </mesh>
   );
@@ -27,6 +27,22 @@ const Particle = ({ position, color, speed }: { position: [number, number, numbe
 const MouseParticles = () => {
   const particleCount = 200;
   const isMobile = useIsMobile();
+  const { mouse, viewport } = useThree();
+  const [mousePosition, setMousePosition] = useState<[number, number, number]>([0, 0, 0]);
+  
+  // Update mouse position
+  useEffect(() => {
+    const handleMouseMove = () => {
+      setMousePosition([
+        (mouse.x * viewport.width) / 2, 
+        (mouse.y * viewport.height) / 2, 
+        0
+      ]);
+    };
+    
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, [mouse, viewport]);
   
   // Generate random particles
   const particles = useMemo(() => {
@@ -47,7 +63,11 @@ const MouseParticles = () => {
         ? particles.slice(0, particleCount / 3).map((particle, i) => (
             <Particle 
               key={i} 
-              position={particle.position} 
+              position={[
+                particle.position[0] + mousePosition[0] * 0.05,
+                particle.position[1] + mousePosition[1] * 0.05,
+                particle.position[2]
+              ]} 
               color={particle.color} 
               speed={particle.speed} 
             />
@@ -55,7 +75,11 @@ const MouseParticles = () => {
         : particles.map((particle, i) => (
             <Particle 
               key={i} 
-              position={particle.position} 
+              position={[
+                particle.position[0] + mousePosition[0] * 0.05,
+                particle.position[1] + mousePosition[1] * 0.05,
+                particle.position[2]
+              ]} 
               color={particle.color} 
               speed={particle.speed} 
             />
@@ -70,7 +94,7 @@ const MouseParticles = () => {
 // Main particle system component
 const ParticleSystem = () => {
   return (
-    <div className="absolute inset-0 z-0 opacity-50">
+    <div className="absolute inset-0 z-0 opacity-70">
       <Canvas camera={{ position: [0, 0, 20], fov: 75 }}>
         <MouseParticles />
       </Canvas>

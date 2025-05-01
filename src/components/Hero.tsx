@@ -49,9 +49,13 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="relative">
+            <motion.div 
+              className="relative"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
               <div className="absolute -inset-0.5 bg-gradient-to-r from-zapflow-500 to-zapflow-700 rounded-lg blur-lg opacity-30 animate-pulse"></div>
-              <div className="relative bg-white p-8 rounded-lg shadow-xl animate-float">
+              <div className="relative bg-white p-8 rounded-lg shadow-xl">
                 <div className="space-y-6">
                   <div className="bg-gray-100 h-10 w-3/4 rounded-md"></div>
                   <div className="space-y-2">
@@ -59,15 +63,19 @@ const Hero = () => {
                     <div className="bg-gray-100 h-4 w-5/6 rounded-md"></div>
                     <div className="bg-gray-100 h-4 w-4/6 rounded-md"></div>
                   </div>
-                  <div className="flex gap-3">
+                  <motion.div 
+                    className="flex gap-3"
+                    whileHover={{ x: 10 }}
+                    transition={{ duration: 0.3 }}
+                  >
                     <div className="bg-zapflow-600 h-10 w-32 rounded-md"></div>
                     <div className="bg-gray-200 h-10 w-32 rounded-md"></div>
-                  </div>
+                  </motion.div>
                 </div>
                 <div className="absolute -bottom-4 -right-4 h-24 w-24 bg-zapflow-600 rounded-full opacity-10 animate-pulse"></div>
                 <div className="absolute -top-4 -left-4 h-16 w-16 bg-zapflow-400 rounded-full opacity-10 animate-pulse"></div>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>

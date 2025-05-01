@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Zap, CheckCircle2 } from "lucide-react";
 
@@ -15,9 +16,13 @@ const AboutSection = () => {
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 order-2 lg:order-1">
-            <div className="inline-flex items-center gap-2 bg-zapflow-100 px-3 py-1 rounded-full text-zapflow-800">
-              <Zap size={16} className="text-zapflow-600" />
-              <span className="text-sm font-medium">Sobre o zapFlow</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full" style={{ 
+              backgroundColor: 'transparent', 
+              textShadow: '0 0 1px #01f05a, 0 0 2px #01f05a', 
+              border: '1px solid #01f05a'
+            }}>
+              <Zap size={16} className="text-white" />
+              <span className="text-sm font-medium text-white">Sobre o zapFlow</span>
             </div>
             <h2 className="text-white">
               Inovação e tecnologia para <span className="text-zapflow-600">impulsionar</span> seu negócio
@@ -68,4 +73,5 @@ const AboutSection = () => {
     </section>
   );
 };
+
 export default AboutSection;

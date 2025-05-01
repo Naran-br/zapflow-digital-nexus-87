@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
 import { Phone, Mail, MapPin, Send, CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
 
 const ContactSection = () => {
   const [formState, setFormState] = useState({
@@ -36,11 +37,30 @@ const ContactSection = () => {
     }, 5000);
   };
 
+  const pulseVariants = {
+    initial: { scale: 1 },
+    animate: {
+      scale: [1, 1.05, 1],
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+        repeatType: "reverse" as const
+      }
+    }
+  };
+
   return (
     <section id="contact" className="section bg-[#303030] text-zapflow-500">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16 parallax-element" data-speed="0.15">
-          <h2 className="mb-4 text-zapflow-500">Entre em Contato</h2>
+          <motion.h2 
+            className="mb-4 text-zapflow-500 font-bold text-3xl sm:text-4xl"
+            variants={pulseVariants}
+            initial="initial"
+            animate="animate"
+          >
+            Entre em Contato
+          </motion.h2>
           <p className="text-zapflow-500 text-lg">
             Estamos prontos para ajudar a transformar seu negócio com tecnologia
             de ponta. Envie-nos uma mensagem e entraremos em contato em breve.
@@ -180,13 +200,20 @@ const ContactSection = () => {
                   ></textarea>
                 </div>
 
-                <button
+                <motion.button
                   type="submit"
-                  className="w-full bg-zapflow-500 hover:bg-zapflow-600 text-black py-3 px-4 rounded-full transition-all duration-300 font-medium flex items-center justify-center hover:shadow-lg hover:shadow-zapflow-500/20 transform hover:-translate-y-1"
+                  className="w-full bg-zapflow-500 hover:bg-zapflow-600 text-black py-3 px-4 rounded-full transition-all duration-300 font-bold flex items-center justify-center hover:shadow-lg hover:shadow-zapflow-500/20"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  initial={{ y: 0 }}
+                  animate={{ 
+                    y: [0, -5, 0],
+                    transition: { duration: 1.5, repeat: Infinity, repeatType: "reverse" }
+                  }}
                 >
                   Enviar Mensagem
                   <Send size={16} className="ml-2" />
-                </button>
+                </motion.button>
               </form>
             )}
           </div>

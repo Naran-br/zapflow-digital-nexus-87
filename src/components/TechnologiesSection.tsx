@@ -5,47 +5,47 @@ const technologies = [
   {
     name: "n8n",
     description: "Plataforma de automação de fluxos de trabalho com conexões versáteis entre aplicativos.",
-    logo: "/lovable-uploads/72467222-5770-4089-9e17-92013fb34620.png",
+    logo: "https://seeklogo.com/images/N/n8n-io-logo-451803/vector-logo.svg",
   },
   {
     name: "OpenAI",
     description: "Modelos de linguagem avançados para geração de conteúdo e interações inteligentes.",
-    logo: "/lovable-uploads/9835c392-bcf5-43dd-a372-a4651bbba7b9.png",
+    logo: "https://worldvectorlogo.com/download/openai-wordmark.svg",
   },
   {
     name: "Supabase",
     description: "Plataforma open source para desenvolvimento de aplicações com banco de dados PostgreSQL.",
-    logo: "/lovable-uploads/39c5c128-70db-4c3e-808a-6d1fd283c063.png",
+    logo: "https://seeklogo.com/images/S/supabase-logo-435677/vector-logo.svg",
   },
   {
     name: "Redis",
     description: "Armazenamento de dados em memória para alta performance e cache avançado.",
-    logo: "/lovable-uploads/1105830b-1c95-4c94-8253-44bb57358877.png", 
+    logo: "https://worldvectorlogo.com/download/redis.svg", 
   },
   {
     name: "WhatsApp",
     description: "Integração oficial e avançada com WhatsApp para comunicação eficiente.",
-    logo: "/lovable-uploads/6e782601-d997-4a13-bd84-7f458a151cf0.png", 
+    logo: "https://worldvectorlogo.com/download/whatsapp.svg", 
   },
   {
     name: "Cal.com",
     description: "Sistema de agendamento intuitivo para gerenciamento de compromissos.",
-    logo: "/lovable-uploads/554c27a4-4e6e-4ad9-8b63-788e79ac4acf.png",
+    logo: "https://seeklogo.com/images/C/cal-com-logo-438949/vector-logo.svg",
   },
   {
     name: "Google",
     description: "Conjunto de ferramentas do Google para diversas funcionalidades e IA avançada.",
-    logo: "", // Placeholder for future logo
+    logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
   },
   {
     name: "Typebot",
     description: "Criação de chatbots conversacionais com interfaces visuais e integrações.",
-    logo: "", // Placeholder for future logo
+    logo: "https://www.vectorlogo.zone/logos/typebotio/typebotio-icon.svg",
   },
   {
     name: "Dify",
     description: "Plataforma de desenvolvimento de aplicações de IA com interfaces avançadas.",
-    logo: "", // Placeholder for future logo
+    logo: "https://brandfetch.com/logo/getdify.com/primary.svg",
   },
 ];
 
@@ -75,6 +75,7 @@ const TechnologiesSection = () => {
                       src={tech.logo} 
                       alt={`${tech.name} logo`} 
                       className="w-full h-full object-contain"
+                      loading="lazy"
                     />
                   ) : (
                     <div className="w-full h-full bg-gray-200 rounded-lg animate-pulse" />

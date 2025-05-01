@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,9 +60,19 @@ const NavBar = () => {
           </div>
           
           {/* CTA Button */}
-          <a href="#contact" className="hidden md:block btn-primary">
+          <motion.a 
+            href="#contact" 
+            className="hidden md:block btn-primary font-bold"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ y: 0 }}
+            animate={{ 
+              y: [0, -3, 0],
+              transition: { duration: 1.5, repeat: Infinity, repeatType: "reverse" }
+            }}
+          >
             Fale Conosco
-          </a>
+          </motion.a>
           
           {/* Mobile Menu Button */}
           <button className="md:hidden text-[#303030] absolute right-6" onClick={toggleMenu}>
@@ -83,13 +94,15 @@ const NavBar = () => {
                   {link.name}
                 </a>
               ))}
-              <a 
+              <motion.a 
                 href="#contact" 
-                className="btn-primary mx-6 text-center"
+                className="btn-primary mx-6 text-center font-bold"
                 onClick={() => setIsOpen(false)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 Fale Conosco
-              </a>
+              </motion.a>
             </div>
           </div>
         )}

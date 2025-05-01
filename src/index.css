@@ -50,3 +50,52 @@ canvas {
   display: block;
   pointer-events: none;
 }
+
+/* Hover effects for service cards */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover .hover-move-icon {
+  transform: translateX(10px);
+}
+
+/* Text outline styles */
+.text-outline {
+  text-shadow: 
+    -1px -1px 0 #01f05a,
+    1px -1px 0 #01f05a,
+    -1px 1px 0 #01f05a,
+    1px 1px 0 #01f05a;
+}
+
+/* Logo section styles */
+.logo-section {
+  min-height: 250px;
+  padding: 3rem 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animation for elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-gentle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-pulse-gentle {
+  animation: pulse-gentle 3s ease-in-out infinite;
+}

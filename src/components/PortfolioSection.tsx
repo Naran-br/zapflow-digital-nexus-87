@@ -4,13 +4,13 @@ import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "Plataforma de Agendamento para Clínica",
+    title: "Sistema de agendamento",
     category: "Agendamento Automático",
     description: "Sistema integrado para gerenciamento de consultas e atendimentos.",
     image: "bg-gradient-to-br from-blue-100 to-blue-200",
   },
   {
-    title: "Chatbot com IA para E-commerce",
+    title: "Chatbot com IA",
     category: "Chatbots com IA",
     description: "Atendimento automático inteligente para suporte ao cliente.",
     image: "bg-gradient-to-br from-purple-100 to-purple-200",
@@ -22,19 +22,19 @@ const projects = [
     image: "bg-gradient-to-br from-orange-100 to-orange-200",
   },
   {
-    title: "Site Institucional para Escritório de Advocacia",
+    title: "Sites institucionais",
     category: "Criação de Sites",
     description: "Presença digital profissional com área de cliente integrada.",
     image: "bg-gradient-to-br from-green-100 to-green-200",
   },
   {
-    title: "Gestão de Agenda para Barbearia",
+    title: "Gestão de agenda",
     category: "Agendamento Automático",
     description: "Sistema de reservas online com lembretes automáticos.",
     image: "bg-gradient-to-br from-red-100 to-red-200",
   },
   {
-    title: "Transformação Digital para Varejista",
+    title: "Digitalização para empreendedores",
     category: "Consultoria Tecnológica",
     description: "Estratégia completa de digitalização de processos internos.",
     image: "bg-gradient-to-br from-teal-100 to-teal-200",
@@ -64,7 +64,7 @@ const PortfolioSection = () => {
                 className={`h-48 ${project.image} flex items-center justify-center p-6`}
               >
                 <div className="font-bold text-xl text-center text-gray-100">
-                  {project.title.split(" ").slice(0, 2).join(" ")}
+                  {project.title}
                 </div>
               </div>
               <div className="p-6">
