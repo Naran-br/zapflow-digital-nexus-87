@@ -20,7 +20,7 @@ const Points = () => {
     return p;
   }, [actualCount]);
 
-  const bufferRef = useRef();
+  const bufferRef = useRef<THREE.BufferAttribute>(null!);
 
   useFrame(({ clock }) => {
     if (!bufferRef.current) return;
@@ -43,9 +43,9 @@ const Points = () => {
       <bufferGeometry>
         <bufferAttribute
           ref={bufferRef}
-          attachObject={["attributes", "position"]}
-          array={new Float32Array(actualCount * 3)}
+          attach="position"
           count={actualCount}
+          array={new Float32Array(actualCount * 3)}
           itemSize={3}
         />
       </bufferGeometry>
