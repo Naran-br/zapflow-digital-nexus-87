@@ -1,66 +1,44 @@
 
-import React, { useRef, useMemo } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import * as THREE from "three";
+import React from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
-const Points = () => {
-  const count = 2000;
-  const isMobile = useIsMobile();
-  const actualCount = isMobile ? count / 2 : count;
-  
-  // Create points
-  const points = useMemo(() => {
-    const p = new Array(actualCount).fill(0).map((_, i) => {
-      const x = (Math.random() - 0.5) * 40;
-      const y = (Math.random() - 0.5) * 20;
-      const z = (Math.random() - 0.5) * 10;
-      return new THREE.Vector3(x, y, z);
-    });
-    return p;
-  }, [actualCount]);
-
-  const bufferRef = useRef<THREE.BufferAttribute>(null!);
-
-  useFrame(({ clock }) => {
-    if (!bufferRef.current) return;
-    
-    const positions = bufferRef.current.array;
-    const time = clock.getElapsedTime();
-    
-    for (let i = 0; i < actualCount; i++) {
-      const i3 = i * 3;
-      positions[i3] = points[i].x + Math.sin(time + i * 0.1) * 0.3;
-      positions[i3 + 1] = points[i].y + Math.cos(time + i * 0.1) * 0.3;
-      positions[i3 + 2] = points[i].z;
-    }
-    
-    bufferRef.current.needsUpdate = true;
-  });
-  
-  return (
-    <points>
-      <bufferGeometry>
-        <bufferAttribute
-          ref={bufferRef}
-          attach="position"
-          count={actualCount}
-          array={new Float32Array(actualCount * 3)}
-          itemSize={3}
-        />
-      </bufferGeometry>
-      <pointsMaterial size={0.1} color="#01f05a" transparent opacity={0.6} />
-    </points>
-  );
-};
-
 const LogoBackground = () => {
+  const isMobile = useIsMobile();
+  const pointCount = isMobile ? 30 : 60;
+
   return (
     <div className="absolute inset-0 h-full w-full overflow-hidden">
-      <Canvas camera={{ position: [0, 0, 15], fov: 60 }}>
-        <Points />
-        <ambientLight intensity={0.5} />
-      </Canvas>
+      <div className="relative w-full h-full">
+        {Array.from({ length: pointCount }).map((_, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full bg-zapflow-500 opacity-50 animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              width: `${Math.random() * 6 + 2}px`,
+              height: `${Math.random() * 6 + 2}px`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${Math.random() * 4 + 2}s`,
+            }}
+          />
+        ))}
+        {Array.from({ length: Math.floor(pointCount / 2) }).map((_, i) => (
+          <div
+            key={`line-${i}`}
+            className="absolute bg-gradient-to-r from-transparent via-zapflow-500 to-transparent opacity-20"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              width: `${Math.random() * 100 + 50}px`,
+              height: '1px',
+              transform: `rotate(${Math.random() * 360}deg)`,
+              animation: `pulse ${Math.random() * 4 + 2}s infinite`,
+              animationDelay: `${Math.random() * 2}s`,
+            }}
+          />
+        ))}
+      </div>
     </div>
   );
 };
