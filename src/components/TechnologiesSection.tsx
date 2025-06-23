@@ -5,47 +5,47 @@ const technologies = [
   {
     name: "n8n",
     description: "Plataforma de automação de fluxos de trabalho com conexões versáteis entre aplicativos.",
-    logo: "https://seeklogo.com/images/N/n8n-io-logo-451803/vector-logo.svg",
+    logo: "/tech-logos/n8n-logo.svg",
   },
   {
     name: "OpenAI",
     description: "Modelos de linguagem avançados para geração de conteúdo e interações inteligentes.",
-    logo: "https://worldvectorlogo.com/download/openai-wordmark.svg",
+    logo: "/tech-logos/openai-logo.png",
   },
   {
     name: "Supabase",
     description: "Plataforma open source para desenvolvimento de aplicações com banco de dados PostgreSQL.",
-    logo: "https://seeklogo.com/images/S/supabase-logo-435677/vector-logo.svg",
+    logo: "/tech-logos/supabase-logo.svg",
   },
   {
     name: "Redis",
     description: "Armazenamento de dados em memória para alta performance e cache avançado.",
-    logo: "https://worldvectorlogo.com/download/redis.svg", 
+    logo: "/tech-logos/redis-logo.png", 
   },
   {
     name: "WhatsApp",
     description: "Integração oficial e avançada com WhatsApp para comunicação eficiente.",
-    logo: "https://worldvectorlogo.com/download/whatsapp.svg", 
+    logo: "/tech-logos/whatsapp-logo.png", 
   },
   {
     name: "Cal.com",
     description: "Sistema de agendamento intuitivo para gerenciamento de compromissos.",
-    logo: "https://seeklogo.com/images/C/cal-com-logo-438949/vector-logo.svg",
+    logo: "/tech-logos/cal-logo.svg",
   },
   {
     name: "Google",
     description: "Conjunto de ferramentas do Google para diversas funcionalidades e IA avançada.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+    logo: "/tech-logos/google-logo.svg",
   },
   {
     name: "Typebot",
     description: "Criação de chatbots conversacionais com interfaces visuais e integrações.",
-    logo: "https://www.vectorlogo.zone/logos/typebotio/typebotio-icon.svg",
+    logo: "/tech-logos/typebot-logo.svg",
   },
   {
     name: "Dify",
     description: "Plataforma de desenvolvimento de aplicações de IA com interfaces avançadas.",
-    logo: "https://brandfetch.com/logo/getdify.com/primary.svg",
+    logo: "/tech-logos/dify-logo.png",
   },
 ];
 
@@ -70,16 +70,15 @@ const TechnologiesSection = () => {
             >
               <div className="flex items-start p-6">
                 <div className="bg-white rounded-lg p-4 mr-4 w-16 h-16 flex items-center justify-center">
-                  {tech.logo ? (
-                    <img 
-                      src={tech.logo} 
-                      alt={`${tech.name} logo`} 
-                      className="w-full h-full object-contain"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-gray-200 rounded-lg animate-pulse" />
-                  )}
+                  <img 
+                    src={tech.logo} 
+                    alt={`${tech.name} logo`} 
+                    className="w-full h-full object-contain"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-2 text-zapflow-200">

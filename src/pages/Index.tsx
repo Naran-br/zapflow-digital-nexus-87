@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
 import TechnologiesSection from "@/components/TechnologiesSection";
+import PlansSection from "@/components/PlansSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
@@ -75,6 +76,17 @@ const Index = () => {
           viewport={{ once: true, margin: "-100px" }}
         >
           <TechnologiesSection />
+        </motion.div>
+        
+        <Separator className="section-divider" />
+        
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <PlansSection />
         </motion.div>
         
         <Separator className="section-divider" />
