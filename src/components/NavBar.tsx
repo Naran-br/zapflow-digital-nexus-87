@@ -24,13 +24,14 @@ const NavBar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Sobre", href: "#about" },
-    { name: "Serviços", href: "#services" },
-    { name: "Tecnologias", href: "#technologies" },
-    { name: "Portfólio", href: "#portfolio" },
-    { name: "Depoimentos", href: "#testimonials" },
-    { name: "Contato", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Sobre", href: "/#about" },
+    { name: "Serviços", href: "/#services" },
+    { name: "Agendamento", href: "/agendamento-automatico" },
+    { name: "Tecnologias", href: "/#technologies" },
+    { name: "Portfólio", href: "/#portfolio" },
+    { name: "Depoimentos", href: "/#testimonials" },
+    { name: "Contato", href: "/#contact" },
   ];
 
   return (
@@ -41,7 +42,7 @@ const NavBar = () => {
       <div className="container-custom">
         <nav className="flex items-center justify-between py-4">
           <div className="flex items-center justify-center w-full md:w-auto">
-            <a href="#home" className="text-2xl font-bold text-[#303030] mx-auto md:mx-0">
+            <a href="/" className="text-2xl font-bold text-[#303030] mx-auto md:mx-0">
               zap<span className="text-zapflow-600">Flow</span>
             </a>
           </div>
@@ -61,7 +62,7 @@ const NavBar = () => {
           
           {/* CTA Button */}
           <motion.a 
-            href="#contact" 
+            href="/#contact" 
             className="hidden md:block btn-primary font-bold"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -95,7 +96,7 @@ const NavBar = () => {
                 </a>
               ))}
               <motion.a 
-                href="#contact" 
+                href="/#contact" 
                 className="btn-primary mx-6 text-center font-bold"
                 onClick={() => setIsOpen(false)}
                 whileHover={{ scale: 1.05 }}
