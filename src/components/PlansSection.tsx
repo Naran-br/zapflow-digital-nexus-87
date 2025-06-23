@@ -13,12 +13,12 @@ const plans = [
     setupPrice: "R$ 497",
     features: [
       "Fluxo automatizado simples com Typebot",
-      "Atendimento rápido com menus e perguntas frequentes",
+      "Atendimento rápido com menus, perguntas frequentes ou captação de interesse",
       "Personalização visual com logo, cores e tom de voz",
       "1 número de WhatsApp integrado",
       "1 atualização por mês no fluxo"
     ],
-    ideal: "Pequenos negócios, salões, profissionais autônomos",
+    ideal: "Pequenos negócios, salões, profissionais autônomos e quem deseja automatizar o atendimento com baixo custo",
     color: "border-blue-500",
     bgColor: "bg-blue-50"
   },
@@ -28,17 +28,17 @@ const plans = [
     subtitle: "n8n + IA",
     description: "Robô Inteligente com IA e Integrações Avançadas",
     monthlyPrice: "R$ 449",
-    setupPrice: "R$ 1.497",
+    setupPrice: "Valor sob consulta",
     features: [
-      "Robô com IA para entender perguntas abertas",
-      "Entende áudios e responde com voz realista",
-      "Integração com sistemas como AgendaPro, Google Calendar",
+      "Robô com IA para entender perguntas abertas, realizar tarefas e manter contexto",
+      "Entende áudios do cliente e responde com voz realista (via ElevenLabs)",
+      "Integração com sistemas como AgendaPro, Google Calendar, ERPs e APIs",
       "Memória com Redis (continuidade de conversa)",
       "Múltiplos fluxos com lógicas condicionais",
       "Até 3 números de WhatsApp integrados",
       "2 atualizações por mês nos fluxos"
     ],
-    ideal: "Clínicas, agências, comércios, e-commerces",
+    ideal: "Clínicas, agências, comércios, e-commerces e empresas que precisam automatizar atendimentos, agendamentos, cobranças ou vendas de forma personalizada e inteligente",
     color: "border-zapflow-500",
     bgColor: "bg-zapflow-50",
     featured: true
@@ -49,15 +49,15 @@ const plans = [
     subtitle: "n8n",
     description: "Automatize fluxos complexos, integre sistemas e aumente sua produtividade",
     monthlyPrice: "Sob demanda",
-    setupPrice: "A partir de R$ 1.000",
+    setupPrice: "Valor sob consulta",
     features: [
-      "Consultoria avulsa: R$ 150 a R$ 250/h",
-      "Pacote 5h: R$ 1.000",
-      "Pacote 10h: R$ 1.800",
-      "Implantação completa: R$ 2.000 a R$ 5.000",
+      "Consultoria avulsa: R$ 200 a R$ 300/h",
+      "Pacote 5h: R$ 1.250",
+      "Pacote 10h: R$ 2.400",
+      "Implantação completa: Valor sob consulta",
       "Criação de automações personalizadas",
       "Integração com APIs, bancos de dados, CRMs",
-      "Otimização e escalabilidade de sistemas"
+      "Otimização e escalabilidade de robôs ZapBot ou outros sistemas"
     ],
     ideal: "Empresas com necessidades específicas e complexas",
     color: "border-purple-500",
